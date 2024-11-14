@@ -3,6 +3,7 @@
     "name": "SDEV257-M03Geolocation",
     "slug": "SDEV257-M03Geolocation",
     "version": "1.0.0",
+    "main": "node_modules/expo/AppEntry.js",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -19,6 +20,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCIs0OikM4s1n4FJWJlvP5o1n3-afFGxUg"
+        }
       }
     },
     "web": {
