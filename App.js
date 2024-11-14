@@ -15,7 +15,7 @@ export default () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== "granted") {
         console.log("Permission to access location was denied");
-        setLocation({ latitude: 37.7749, longitude: -122.4194 });
+        // setLocation({ latitude: 39.62509, longitude: -86.10563 });
         return;
       }
 

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SDEV257-M03Geolocation",
-    "slug": "SDEV257-M03Geolocation",
+    "name": "SDEV257-M04Geolocation",
+    "slug": "SDEV257-M04Geolocation",
     "version": "1.0.0",
     "main": "node_modules/expo/AppEntry.js",
     "orientation": "portrait",
