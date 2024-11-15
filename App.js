@@ -15,7 +15,9 @@ export default () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== "granted") {
         console.log("Permission to access location was denied");
-        // setLocation({ latitude: 39.62509, longitude: -86.10563 });
+
+        // Set default location
+        setLocation({ latitude: 39.62509, longitude: -86.10563 });
         return;
       }
 
@@ -27,11 +29,19 @@ export default () => {
     getLocation();
   }, []);
 
-  //Restaurant Location
+  //Default Location Marker
+  const defaultLocation = {
+    latitude: 39.62509,
+    longitude: -86.10563,
+    title: "Default Location",
+  };
+
+  //Restaurant Location Marker
   const restaurant = {
     latitude: 39.63145,
     longitude: -86.11475,
     title: "Dominos",
+    description: "Nearby Pizza Place",
   };
 
   return (
@@ -49,6 +59,15 @@ export default () => {
             longitudeDelta: 0.0421,
           }}
         >
+          {/* Default Location Marker */}
+          <Marker
+            coordinate={{
+              latitude: defaultLocation.latitude,
+              longitude: defaultLocation.longitude,
+            }}
+            title={defaultLocation.title}
+          />
+          {/* Domino's Pizza Marker */}
           <Marker
             coordinate={{
               latitude: restaurant.latitude,
